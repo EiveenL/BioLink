@@ -1,0 +1,463 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('./fonts/Raleway-Light.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body * {
+    font-family: 'Raleway', sans-serif;
+    line-height: 160%; 
+}
+
+body {
+    background-color: #16161D;
+    background-size: 100% auto;
+    overflow: hidden; /* Disable scrollbars */
+    height: 100vh; 
+}
+
+.container{
+    display: flex;
+    flex-direction: column; /* Arrange content vertically by default */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    height: 100%; /* Make container take up full viewport height */
+    width: 100%;
+}
+
+
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .8;
+}
+
+video::-webkit-media-controls{
+    display: none !important;
+}
+
+header {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    color: white;
+    margin-top: -25%;
+    align-content: space-between;
+}
+
+header a {
+    font-family: 'Raleway', sans-serif;
+    padding-top: 0px;
+    text-align: center;
+    font-size: 10px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.logo-container img {
+    max-width: 124px;
+    max-height: 124x;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.logo-container:hover {
+    transform: scale(1.1)
+}
+
+header h3 {
+    display: inline-block;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    padding-top: 12px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.target{
+    display: flex;
+    align-items: baseline;
+    margin-top: -5%;
+}
+
+header p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+}
+
+section ul {
+    box-sizing: border-box;
+    padding: 12px;
+    list-style: none;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.link_button {
+    /*background-color: whitesmoke;*/
+    border-radius: 8px;
+    padding: 8px;
+    margin: 8px;    
+    /*border-style: solid;*/
+    /*border-width: 1px;*/
+    /*border-color: white;*/
+}
+
+ul li a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+
+.link_button:hover{
+    transform: scale(1.02);
+}
+
+footer {
+    font-family: 'Raleway', sans-serif;
+    padding-top: 0px;
+    text-align: center;
+    font-size: 10px;
+    color: white;
+    margin: auto;
+    letter-spacing: 1px;
+}
+
+footer a {
+    font-family: 'Raleway', sans-serif;
+    padding-top: 0px;
+    text-align: center;
+    font-size: 10px;
+    color: white;
+    margin: auto;
+    letter-spacing: 1px;
+}
+
+/* Start of animation */
+
+header div {
+    animation: fromTop .7s .2s backwards;
+}
+
+header h1 {
+    animation: fadeIn .7s .2s backwards;
+    animation-delay: .2s;
+}
+
+header h3 {
+    animation: fadeIn .7s .2s backwards;
+    animation-delay: .2s;
+}
+
+header p {
+    animation: fadeIn .7s .2s backwards;
+    animation-delay: .3s;
+}
+
+header a {
+    animation: fadeIn .7s .2s backwards;
+    animation-delay: .5s;
+}
+
+main {
+    animation: fadeIn .7s .2s backwards;
+    animation-delay: .7s;
+}
+
+footer {
+    animation: fadeIn .7s .2s backwards;
+    animation-delay: .9s;
+}
+
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px)
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fromBot {
+    from {
+        opacity: 0;
+        transform: translateY(80px)
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.links-list{
+    display: flex;
+}
+
+span {
+    color: #505050;
+    text-decoration: none;
+}
+
+.icon {
+    color: #505050;
+    size: 10px;
+}
+
+header{
+    padding: 10px;
+}
+header h3{
+    font-size: 40px;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+#typing-text {
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 10;
+    color: #b7b4b4;
+    font-size: 15px;
+    font-style: normal;
+}
+
+.container-gen { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 245px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+    border: 2px solid #ffffff0d;
+    backdrop-filter: blur(52px);
+}
+
+.song{
+    display: flex; /* Make the section a flex container */
+    justify-content: center; /* Horizontally center content within the section */
+    align-items: center; 
+}
+
+.song-cont{
+    z-index: 1;
+    margin: 2%;
+    max-width: 450px;
+    width: 80vw;
+    animation: fromBot .7s .2s backwards;
+}  
+
+.container-redes{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+    width: 430px;
+    height: auto; 
+    display: flex;
+    border-width: 10px;
+    border-color: #F9F6EE;
+
+}
+
+.container-redes img{
+    width: 15px;
+}
+
+.badge-contenedor{
+    background-color: #ffffff0d;
+    border-radius: 50px;
+    padding: px;
+    align-content: center;
+    margin: 10px; 
+    padding: 5px 7px 5px 7px;
+    width: auto;
+    height: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ffffff0d;
+}
+
+.iconb{
+    margin: 3px;
+}
+
+.iconb svg{
+    display: block;
+    margin: auto;
+}
+
+.diamond-class::after {
+    content: 'Premium'; /* Replace with the desired description for the diamond icon */
+    position: absolute;
+    bottom: 73%; /* Positioned below the icon */
+    left: 51%; /* Centered horizontally */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s, transform 0.3s ease-in-out; /* Smooth transitions for opacity and scale */
+    color: #fff; /* Text color */
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: background color for the text */
+    padding: 0px 10px 0px 10px;
+    border-radius: 20px; /* Optional: rounded corners for the text */
+    font-size: 12px; /* Optional: text size */
+}
+
+.nohello-class::after {
+    content: 'No hello'; /* Replace with the desired description for the diamond icon */
+    position: absolute;
+    bottom: 73%; /* Positioned below the icon */
+    left: 62%; /* Centered horizontally */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s, transform 0.3s ease-in-out; /* Smooth transitions for opacity and scale */
+    color: #fff; /* Text color */
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: background color for the text */
+    padding: 0px 10px 0px 10px;
+     /* Optional: padding around the text */
+    border-radius: 20px; /* Optional: rounded corners for the text */
+    font-size: 12px; /* Optional: text size */
+}
+
+.verified-class::after {
+    content: 'Verified'; /* Replace with the desired description for the diamond icon */
+    position: absolute;
+    bottom: 73%; /* Positioned below the icon */
+    left: 57%; /* Centered horizontally */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s, transform 0.3s ease-in-out; /* Smooth transitions for opacity and scale */
+    color: #fff; /* Text color */
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: background color for the text */
+    padding: 0px 10px 0px 10px;
+     /* Optional: padding around the text */
+    border-radius: 20px; /* Optional: rounded corners for the text */
+    font-size: 12px; /* Optional: text size */
+}
+
+.diamond-class:hover::after, .verified-class:hover::after, .nohello-class:hover::after{
+    opacity: 1; /* Visible on hover */
+    transform: scale(1.1); /* Zoom in on hover */
+}
+/* End of accordion drop-menu style */
+
+.logo-container{
+    height: 120px;
+    width: 120px;
+    background-color: #101010;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 20px;
+    bottom: 100px;
+    border: 3px solid white;
+    padding: 5px;
+}
+
+.logo-container::before{
+    content: "";
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background-image: conic-gradient(gray 20deg, transparent 120deg);
+    animation: rotar 4s linear infinite;
+}
+
+@keyframes rotar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+}
+
+.logo-container::after{
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: #101010;
+    border-radius: 50%;
+    box-shadow: inset 16px 14px 20px    #0000008c;
+}
+
+
+  @media (max-width: 500px) {
+    .social-links {
+      display: flex; /* Arrange social links in a row */
+      flex-wrap: wrap; /* Wrap links to multiple lines */
+    }
+  
+    .container-gen {
+        width: 95%;
+    }
+    .container-redes-gen{
+        width: 100%;
+    }
+    .container-redes{
+        width: 100%;
+    }
+    .main{
+        width: 100%;
+    }
+    .target{
+        display: block;
+    }
+    .badge-contenedor{
+        width: 80%;
+    }
+    .diamond-class::after {
+        bottom: 53%; /* Positioned below the icon */
+        left: 31%; /* Centered horizontally */
+        padding: 0px 10px 0px 10px;
+        border-radius: 20px; /* Optional: rounded corners for the text */
+    }
+    
+    .nohello-class::after {
+        bottom: 53%; /* Positioned below the icon */
+        left: 46%; /* Centered horizontally */
+        padding: 0px 10px 0px 10px;
+        border-radius: 20px; 
+    }
+
+    .verified-class::after {
+        bottom: 53%; /* Positioned below the icon */
+        left: 39%; /* Centered horizontally */
+        padding: 0px 10px 0px 10px;
+        border-radius: 20px; 
+    }
+    .contenedor{
+        max-height: 110px;
+    }
+    .links-list{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+}
+
